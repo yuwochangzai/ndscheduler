@@ -36,13 +36,9 @@ Check out our blog post - [We Don’t Run Cron Jobs at Nextdoor](https://engblog
 
 From source code:
 
-    git clone https://github.com/Nextdoor/ndscheduler.git
+    git clone https://github.com/yuwochangzai/ndscheduler.git
     cd ndscheduler
     make simple
-
-Or use docker:
-
-    docker run -it -p 8888:8888 wenbinf/ndscheduler
     
 Open your browser and go to [localhost:8888](http://localhost:8888). 
 
@@ -73,7 +69,7 @@ Using pip (from GitHub repo)
     # Run from command line
     #
 
-    pip install -e git+https://github.com/Nextdoor/ndscheduler.git#egg=ndscheduler
+    pip install -e git+https://github.com/yuwochangzai/ndscheduler.git#egg=ndscheduler
 
 (We'll upload the package to PyPI soon.)
 
@@ -85,7 +81,7 @@ You have to implement three things for your scheduler, i.e., ``Settings``, ``Ser
 
 In your implementation, you need to provide a settings file to override default settings (e.g., [settings in simple_scheduler](https://github.com/Nextdoor/ndscheduler/blob/master/simple_scheduler/settings.py)). You need to specify the python import path in the environment variable ``NDSCHEDULER_SETTINGS_MODULE`` before running the server.
 
-All available settings can be found in [default_settings.py](https://github.com/Nextdoor/ndscheduler/blob/master/ndscheduler/default_settings.py) file.
+All available settings can be found in [default_settings.py](https://github.com/yuwochangzai/ndscheduler/blob/master/ndscheduler/default_settings.py) file.
 
 **Server**
 
