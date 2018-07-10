@@ -42,7 +42,8 @@ class SchedulerServer:
         URLS = [
             # Index page
             (r'/', index.Handler),
-
+			# Login page
+            (r'/login', index.LoginHandler),
             # APIs
             (r'/api/%s/jobs' % self.VERSION, jobs.Handler),
             (r'/api/%s/jobs/(.*)' % self.VERSION, jobs.Handler),
@@ -50,7 +51,7 @@ class SchedulerServer:
             (r'/api/%s/executions/(.*)' % self.VERSION, executions.Handler),
             (r'/api/%s/logs' % self.VERSION, audit_logs.Handler),
         ]
-        self.application = tornado.web.Application(URLS, **self.tornado_settings)
+        self.application = tornado.web.Application(URLS,cookie_secret=settings.USER_AUTH_CONFIG['secret'], **self.tornado_settings)
 
     def start_scheduler(self):
         self.scheduler_manager.start()

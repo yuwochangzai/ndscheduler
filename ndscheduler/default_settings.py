@@ -94,3 +94,10 @@ logging.getLogger().setLevel(logging.INFO)
 
 # Packages that contains job classes, e.g., simple_scheduler.jobs
 JOB_CLASS_PACKAGES = []
+
+# User authentication
+USER_AUTH_CONFIG = {
+    'user': 'user',
+    'pwd': 'pwd',
+    'secret': 'your cookie secret'
+}

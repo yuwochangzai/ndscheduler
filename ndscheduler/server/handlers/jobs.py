@@ -12,7 +12,11 @@ from ndscheduler.server.handlers import base
 
 
 class Handler(base.BaseHandler):
-
+    def get(self):
+        if not self.current_user:
+            self.redirect("/login")
+            return
+            
     def _get_jobs(self):
         """Returns a dictionary for all jobs info.
 
