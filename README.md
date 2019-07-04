@@ -161,3 +161,12 @@ We provide a default implementation of web ui. You can replace the default web u
 **Modify a job**
 
 ![Modify a job](http://i.imgur.com/aWv6xOR.png)
+
+## 配置指南
+**Demo 1**
+
+ ![image](https://image-1251806597.cos.ap-guangzhou.myqcloud.com/cron1.png)
+ 
+ **Demo 2**
+
+ ![image](https://image-1251806597.cos.ap-guangzhou.myqcloud.com/cron2.png)
